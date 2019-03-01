@@ -64,7 +64,6 @@ export default {
                   function(value){                     //这里是有三个默认参数的，但这里只用到第一个参数
                           getUserMsgById(value)
                           .then( res => {
-                            if(res.objectId){
                             // ---------------------------------------------
                                 map.set(value,res)       //每个user_id对应一个对象， 如 "Tmqw555c" => {"objectId": "Tmqw555c","createdAt": "2019-02-22 17:31:26","mobile": "13430200124","nick": "曾杰"...}
                                 num++;
@@ -81,14 +80,13 @@ export default {
                                       'logo':map.get(res_dynamic.results[i].user_id).logo,
                                       'name':'like-o'                               //这是用点赞图标显示样式用的
                                     });
-                                  }
+                                  };
+                                  // 反转数组，使得动态按最新时间排序
+                                  oldthis.list.reverse();
                                 }
 
                             // ---------------------------------------------  
-                            }
-                            else{
-                                console.log('获取失败');
-                            }
+
                           })
                           .catch( err =>{
                               console.log(err);

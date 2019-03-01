@@ -1,5 +1,5 @@
 // 导入http.js的内容
-import{getInfoByWhere,getAllInfo,getMsgById,putMsg} from './http.js'
+import{getInfoByWhere,getAllInfo,getMsgById,putMsg, postMsg} from './http.js'
 
 // ===================get======================
 // 获取整个用户表
@@ -21,3 +21,9 @@ export const GetAllDynamic = () => getAllInfo('/tb_dynamic');
 // ==================put===============================
 // 修改动态表某条动态数据
 export const putDynamic = (dynamic_id,p) =>putMsg('/tb_dynamic',dynamic_id,p);
+
+// 增加一条动态
+export const postDynamic = p => postMsg('/tb_dynamic',p);
+
+// 增加一条成就
+export const postAch = p => postMsg('/tb_record',p);

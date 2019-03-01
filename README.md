@@ -33,4 +33,12 @@ git add .
 git commit -m "自定义信息"     //至此，保存至本地的.git仓库里
 git push 
 
-测试
+环境和依赖
+----
+
+- node
+- npm
+- webpack
+- eslint
+- @vue/cli 3.4.1
+- vant

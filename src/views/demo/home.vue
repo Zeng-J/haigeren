@@ -33,7 +33,7 @@
             <van-tabbar-item icon="records" @click="show=!show"> 
                 发布
             </van-tabbar-item>
-            <van-tabbar-item icon="newspaper-o" info="20">
+            <van-tabbar-item icon="newspaper-o" info="2">
                 <router-link to="/home/achievement">成就</router-link>
             </van-tabbar-item>
             <van-tabbar-item icon="user-o">
@@ -43,6 +43,7 @@
     </div>
 </template>
 <script>
+import {postDynamic} from '@/http/api.js'
 export default {
     data() {
     return {
@@ -54,9 +55,23 @@ export default {
     methods: {
     // 发布动态的函数
     onClickRight:function() {     
-        console.log('发布动态内容');
+        // console.log('发布动态内容');
         this.show=!this.show;
-        console.log(this.message);
+        // console.log(this.message);
+        if(!this.message) return;
+        postDynamic({
+            "user_id":localStorage.getItem('id'),
+            "content":this.message,
+            "city":"somewhere",
+            "good":0
+        })
+        .then( res =>{
+            // console.log(res);
+            location.reload("/home/bbs");
+        })
+        .catch(res =>{
+
+        })
     }
     }
 };

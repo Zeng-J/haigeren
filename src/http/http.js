@@ -79,5 +79,19 @@ export function putMsg(url,id,params){
     )
 }
 
+// postMsg用于后端数据库表中增加一行数据
+export function postMsg(url,params){
+    return new Promise(
+        (resolve,reject) => {
+            axios.post(url,params)
+            .then(
+                res => {resolve(res.data)},
+                err =>{reject(err.data)}
+            )
+            .catch(err =>{reject(err.data)})
+        }
+    )
+}
+
 
 
