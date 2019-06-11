@@ -2,7 +2,6 @@
     <div>
         <van-nav-bar
         title="海阁人"
-        left-arrow
         />
 
         <!-- 子路由的坑 -->

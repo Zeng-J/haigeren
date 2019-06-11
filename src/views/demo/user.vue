@@ -87,11 +87,11 @@ export default {
             .then( res => {
                 // console.log(res);
                 if(res.objectId){
-                    // console.log('uesr.vue',res);
+                    console.log('uesr.vue',res);
                     //  成功后的跳转和状态保存
-                    this.user_name=res.nick;
-                    this.mobile=res.mobile;
-                    this.logoAddress=res.logo;
+                    this.user_name = res.nick ? res.nick : '游客';
+                    this.mobile = res.mobile;
+                    this.logoAddress = res.logo ? res.logo : 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=188149577,2949073731&fm=27&gp=0.jpg' ;
                 }
                 else{
                     alert("获取个人信息错误！")
@@ -110,11 +110,11 @@ export default {
                 if(res.objectId){
                     console.log(res);
                     //  成功后的跳转和状态保存
-                    this.user_name=res.nick;
+                    this.user_name = res.nick ? res.nick : '游客';
                     this.mobile=res.mobile;
                     this.email=res.email;
                     this.address=res.address;
-                    this.logoAddress=res.logo;
+                    this.logoAddress = res.logo ? res.logo : 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=188149577,2949073731&fm=27&gp=0.jpg' ;
                 }
                 else{
                     alert("获取个人信息错误！")

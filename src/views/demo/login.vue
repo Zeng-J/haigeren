@@ -27,7 +27,7 @@
             />
         </van-cell-group>
         <van-button type="primary" size="large" @click="onLogin">登录</van-button>
-        <span @click="onRegister">立即注册</span>
+        <span @click="onRegister" style="padding-left:12px;">立即注册</span>
     </div>
 </template>
 

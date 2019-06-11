@@ -9,6 +9,9 @@ export const GetAllUser = () => getAllInfo('/tb_user');
 // 根据条件查询用户表
 export const GetUserByParam = p => getInfoByWhere('/tb_user',p);
 
+// 注册账号 
+export const register = p => postMsg('/tb_user',p);
+
 // 根据ID查询用户表
 export const getUserMsgById = p => getMsgById('/tb_user',p);
 
