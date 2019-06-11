@@ -24,20 +24,20 @@
         </van-popup>
 
         <van-tabbar v-model="active">
-            <van-tabbar-item icon="home-o">
-                <router-link to="/home/bbs">首页</router-link>
+            <van-tabbar-item icon="home-o" to="/home/bbs">
+                首页
             </van-tabbar-item>
-            <van-tabbar-item icon="friends-o" dot>
-                <router-link to="/home/schoolmate">同窗</router-link>
+            <van-tabbar-item icon="friends-o" dot to="/home/schoolmate">
+                同窗
             </van-tabbar-item>
             <van-tabbar-item icon="records" @click="show=!show"> 
                 发布
             </van-tabbar-item>
-            <van-tabbar-item icon="newspaper-o" info="2">
-                <router-link to="/home/achievement">成就</router-link>
+            <van-tabbar-item icon="newspaper-o" info="2" to="/home/achievement">
+                成就
             </van-tabbar-item>
-            <van-tabbar-item icon="user-o">
-                <router-link to="/home/user">我</router-link>
+            <van-tabbar-item icon="user-o" to="/home/user">
+                我
             </van-tabbar-item>
         </van-tabbar>
     </div>
